@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { createContext, useState } from 'react';
 import './App.css';
+import Home from './pages/Home/Home';
+import {RouterProvider } from "react-router-dom";
+import router from './configs/routesConfig'
+export const MyContext = createContext()
+
 
 function App() {
+  
+  const [name, setName]  = useState("masud");
+  const myValue = {
+    name, setName
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <MyContext.Provider value={myValue}>
+    <RouterProvider router={router} />
+   </MyContext.Provider>
   );
 }
 
