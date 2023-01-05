@@ -14,7 +14,7 @@ export default function MyNav() {
   return (
     <div >
       <div>
-         <BsYoutube /> FooTube
+         <BsYoutube /> <p>FooTube</p>
       </div>
       <div>
          <input placeholder="Search" type="text" />

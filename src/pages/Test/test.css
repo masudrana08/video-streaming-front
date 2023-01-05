@@ -1,0 +1,5 @@
+h1{
+   font-size: var(--fs-700);
+}
+h2{font-size: var(--fs-600);}
+p{font-size: var(--fs-500);}
