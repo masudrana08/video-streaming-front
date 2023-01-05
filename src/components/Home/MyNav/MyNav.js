@@ -5,7 +5,6 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import styles from './myNav.module.css'
 import { BsYoutube } from "react-icons/bs";
 import { BiSearchAlt } from "react-icons/bi";
 import { RiVideoAddFill } from "react-icons/ri";

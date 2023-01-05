@@ -1,3 +1,49 @@
 :root{
-   font-size: 16px;
+   font-size: 18px;
+   --fs-500: 18px;
+   --fs-600: 29.12px;
+   --fs-700: 47.12px;
+   --fs-800: 76.24px;
+   --ff-opensans: 'Open Sans', sans-serif;
+   --ff-roboto: 'Roboto', sans-serif;
+}
+
+h1, h2, h3{
+   font-family: 'Roboto', sans-serif;
+   font-weight: 700;
+}
+h1{font-size: var(--fs-700)}
+h2{font-size: var(--fs-600)}
+
+p, section, span{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   font-size: var(--fs-500);
+}
+
+
+/* 
+   320px — 480px: Mobile devices.
+   481px — 768px: iPads, Tablets.
+   769px — 1024px: Small screens, laptops.
+   1025px — 1200px: Desktops, large screens.
+   1201px and more — Extra large screens, TV.
+*/
+
+
+/* Media Query  for Ipads and Tablets */
+@media only screen and (min-width: 481px) {
+   
+}
+/* Media Query  for Small Laptop */
+@media only screen and (min-width: 769px) {
+   
+}
+/* Media Query  for Large Desktop */
+@media only screen and (min-width: 1025px) {
+   
+}
+/* Media Query  for Extra Large Screens or TV */
+@media only screen and (min-width: 1201px) {
+   
 }
