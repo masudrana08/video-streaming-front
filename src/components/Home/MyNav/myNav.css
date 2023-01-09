@@ -1,0 +1,53 @@
+.mynav{
+    color: white;
+}
+/* .mynav img{
+    width: 140px;
+    height: auto;
+} */
+.mynav .navv {
+    background-color: var(--bg);
+    padding: .5em 1em;
+    display: grid;
+    grid-template-columns: 40px auto;
+}
+.mynav .logo{
+    display: flex;
+    justify-content: center;
+}
+.mynav .items{
+    background-color: var(--bg);
+    padding: .5em 1em;
+    display: none;
+}
+.mynav .nav-toogler{
+    display: none;
+}
+.mynav .nav-toogler:checked ~ .items{
+    display: block;
+}
+
+.nav-toogler-label span, .nav-toogler-label span::before, .nav-toogler-label span::after{
+    width: 1.5em;
+    height: 2px;
+    border-radius: 2px;
+    background-color: white;
+    z-index: 999;
+    position: relative;
+}
+.nav-toogler-label span::before, .nav-toogler-label span::after{
+    content:"";
+    position: absolute;
+}
+.nav-toogler-label span::before{
+    top: 5px;
+}
+.nav-toogler-label span::after{
+    bottom: 5px;
+}
+
+.nav-toogler-label{
+    display: flex;
+    align-items: center;
+
+}
