@@ -1,11 +1,11 @@
 :root{
-   --fs-500: clamp(1rem, 3vw, 1.6rem);
-   --fs-600: clamp(1.82rem, 8.09vw, 2.91rem);
-   --fs-700: clamp(2.94rem, 13.08vw, 4.73rem);
+   --fs-500: 1rem;
+   --fs-600: 1.82rem;
+   --fs-700: 2.94rem;
    --ff-opensans: 'Open Sans', sans-serif;
    --ff-roboto: 'Roboto', sans-serif;
    --bg: rgb(239, 42, 12);
-   font-size: 18px;
+   font-size: 16px;
 }
 *, *:before, *:after {
    box-sizing: border-box;
@@ -44,11 +44,14 @@ p, section, span, ul, li{
 }
 /* Media Query  for Ipads and Tablets */
 @media only screen and (min-width: 481px) {
+  
    
 }
 /* Media Query  for Small Laptop */
 @media only screen and (min-width: 769px) {
-   
+   :root{
+      font-size: 18px;
+   }
 }
 /* Media Query  for Large Desktop */
 @media only screen and (min-width: 1025px) {

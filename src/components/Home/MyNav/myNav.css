@@ -7,47 +7,108 @@
 } */
 .mynav .navv {
     background-color: var(--bg);
-    padding: .5em 1em;
+    
     display: grid;
     grid-template-columns: 40px auto;
+    height: 50px;
 }
 .mynav .logo{
     display: flex;
     justify-content: center;
-}
-.mynav .items{
-    background-color: var(--bg);
-    padding: .5em 1em;
-    display: none;
+    padding: 0 1em;
 }
 .mynav .nav-toogler{
     display: none;
 }
-.mynav .nav-toogler:checked ~ .items{
-    display: block;
+.mynav .items{
+    background-color: var(--bg);
+    width: 100vw;
+    padding: .5em 1em;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 }
 
+.mynav .nav-toogler:checked ~ .navv .items{
+    transform: scale(1,1);
+}
+
+.nav-toogler-label{
+    padding-left: 1em;
+}
 .nav-toogler-label span, .nav-toogler-label span::before, .nav-toogler-label span::after{
-    width: 1.5em;
+    width: 1.2em;
     height: 2px;
     border-radius: 2px;
     background-color: white;
     z-index: 999;
     position: relative;
+   
+    
 }
+
 .nav-toogler-label span::before, .nav-toogler-label span::after{
     content:"";
     position: absolute;
 }
 .nav-toogler-label span::before{
     top: 5px;
+    
+    
 }
 .nav-toogler-label span::after{
-    bottom: 5px;
+    top: 10px;
+    
+}
+
+.mynav .nav-toogler:checked ~ .navv .nav-toogler-label span{
+    width: 0px;
+}
+.mynav .nav-toogler:checked ~ .navv .nav-toogler-label span::before{
+    transform: rotate(-30deg);
+}
+.mynav .nav-toogler:checked ~ .navv .nav-toogler-label span::after{
+    transform: rotate(30deg);
+    top: 5px;
 }
 
 .nav-toogler-label{
     display: flex;
     align-items: center;
 
+}
+
+
+
+
+/* Media Query  for Ipads and Tablets */
+@media only screen and (min-width: 481px) {
+   
+}
+/* Media Query  for Small Laptop */
+@media only screen and (min-width: 769px) {
+    .nav-toogler-label span{
+        display: none;
+    }
+    .mynav .navv .items, .mynav .navv .logo{
+        all: unset;
+    }
+    .mynav .navv{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mynav .navv .items{
+        display: flex;
+    }
+   
+
+    
+}
+/* Media Query  for Large Desktop */
+@media only screen and (min-width: 1025px) {
+   
+}
+/* Media Query  for Extra Large Screens or TV */
+@media only screen and (min-width: 1201px) {
+   
 }

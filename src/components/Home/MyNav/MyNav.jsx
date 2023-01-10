@@ -13,12 +13,13 @@ export default function MyNav() {
         <div className="logo">
           <h3>LOGO</h3>
         </div>
-      </div>
-      <ul className='items'>
+        <ul className='items'>
         <li>Home</li>
         <li>Subscription</li>
         <li>Watch Later</li>
       </ul>
+      </div>
+      
     </div>
   );
 }
