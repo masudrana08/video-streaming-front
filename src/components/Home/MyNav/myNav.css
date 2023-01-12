@@ -5,10 +5,10 @@
     width: 140px;
     height: auto;
 } */
-.mynav .navv {
+ .navv {
     background-color: var(--bg);
-    
     display: grid;
+    align-items: center;
     grid-template-columns: 40px auto;
     height: 50px;
 }
@@ -16,6 +16,8 @@
     display: flex;
     justify-content: center;
     padding: 0 1em;
+    height: 50px;
+    align-items: center;
 }
 .mynav .nav-toogler{
     display: none;
@@ -26,15 +28,19 @@
     padding: .5em 1em;
     transform: scale(1,0);
     transform-origin: top;
-    transition: transform 400ms ease-in-out;
+    opacity: 0;
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
 }
 
-.mynav .nav-toogler:checked ~ .navv .items{
+.nav-toogler:checked ~ .navv .items{
+    opacity: 1;
     transform: scale(1,1);
 }
 
 .nav-toogler-label{
     padding-left: 1em;
+    height: 80%;
+
 }
 .nav-toogler-label span, .nav-toogler-label span::before, .nav-toogler-label span::after{
     width: 1.2em;
@@ -43,8 +49,6 @@
     background-color: white;
     z-index: 999;
     position: relative;
-   
-    
 }
 
 .nav-toogler-label span::before, .nav-toogler-label span::after{
@@ -52,24 +56,24 @@
     position: absolute;
 }
 .nav-toogler-label span::before{
-    top: 5px;
+    top: -5px;
     
     
 }
 .nav-toogler-label span::after{
-    top: 10px;
+    top: 5px;
     
 }
 
-.mynav .nav-toogler:checked ~ .navv .nav-toogler-label span{
+.nav-toogler:checked ~ .navv .nav-toogler-label span{
     width: 0px;
 }
-.mynav .nav-toogler:checked ~ .navv .nav-toogler-label span::before{
+.nav-toogler:checked ~ .navv .nav-toogler-label span::before{
     transform: rotate(-30deg);
 }
-.mynav .nav-toogler:checked ~ .navv .nav-toogler-label span::after{
+.nav-toogler:checked ~ .navv .nav-toogler-label span::after{
     transform: rotate(30deg);
-    top: 5px;
+    top: -5px;
 }
 
 .nav-toogler-label{
@@ -87,21 +91,29 @@
 }
 /* Media Query  for Small Laptop */
 @media only screen and (min-width: 769px) {
-    .nav-toogler-label span{
+    .nav-toogler-label{
         display: none;
     }
-    .mynav .navv .items, .mynav .navv .logo{
+    .navv .items, .navv .logo{
         all: unset;
     }
-    .mynav .navv{
+    .navv .items{
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
+        gap: 1em;
     }
-    .mynav .navv .items{
-        display: flex;
+    .navv{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 
+        ". L L . . . T T T T T."
     }
-   
-
+    .navv .logo{
+        grid-area: L;
+    }
+    .navv .items{
+        grid-area: T;
+    }
     
 }
 /* Media Query  for Large Desktop */
