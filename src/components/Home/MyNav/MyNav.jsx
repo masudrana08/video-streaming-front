@@ -11,7 +11,7 @@ export default function MyNav() {
         </label>
         {/* <img src={LogoWithText} alt="Logo" /> */}
         <div className="logo">
-          <h3>Footube.</h3>
+          <h3>Tube.</h3>
         </div>
         <ul className='items'>
         <li>Home</li>
